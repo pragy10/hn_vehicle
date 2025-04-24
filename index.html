@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Vehicle Sensor Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Vehicle Sensor Dashboard</h1>
+      <div class="sensor-info">
+        <p>MPU6050 Sensor Data</p>
+        <p id="timestamp">Last Updated: --</p>
+      </div>
+    </header>
+    
+    <div class="dashboard-grid">
+      <div class="card">
+        <h2>Accelerometer Data</h2>
+        <div id="accelerometer-chart" class="chart-container"></div>
+        <div class="current-values">
+          <div class="value-box">
+            <span>X: </span><span id="ax-value">0</span>
+          </div>
+          <div class="value-box">
+            <span>Y: </span><span id="ay-value">0</span>
+          </div>
+          <div class="value-box">
+            <span>Z: </span><span id="az-value">0</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card">
+        <h2>Gyroscope Data</h2>
+        <div id="gyroscope-chart" class="chart-container"></div>
+        <div class="current-values">
+          <div class="value-box">
+            <span>X: </span><span id="gx-value">0</span>
+          </div>
+          <div class="value-box">
+            <span>Y: </span><span id="gy-value">0</span>
+          </div>
+          <div class="value-box">
+            <span>Z: </span><span id="gz-value">0</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card">
+        <h2>Vehicle Orientation</h2>
+        <div id="orientation-display" class="orientation-container">
+          <div class="vehicle-model">
+            <div class="vehicle-top"></div>
+            <div class="vehicle-body"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card">
+        <h2>Sensor Statistics</h2>
+        <div class="stats-container">
+          <div class="stat-item">
+            <span class="stat-label">Max Acceleration:</span>
+            <span id="max-accel">0 g</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Max Angular Velocity:</span>
+            <span id="max-gyro">0 deg/s</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Connection Status:</span>
+            <span id="connection-status">Connected</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>

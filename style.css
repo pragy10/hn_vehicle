@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  body {
+    background: linear-gradient(135deg, #000000, #32055c, #be326c);
+    background-attachment: fixed;
+    color: white;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  h1 {
+    font-size: 2rem;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(190, 50, 108, 0.7);
+  }
+  
+  .sensor-info {
+    text-align: right;
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+  
+  .dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 20px;
+  }
+  
+  .card {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  h2 {
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    color: #be326c;
+  }
+  
+  .chart-container {
+    height: 250px;
+    margin-bottom: 15px;
+  }
+  
+  .current-values {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    background-color: rgba(50, 5, 92, 0.3);
+    border-radius: 5px;
+  }
+  
+  .value-box {
+    text-align: center;
+    font-size: 1.1rem;
+  }
+  
+  .value-box span:first-child {
+    font-weight: bold;
+    color: #be326c;
+  }
+  
+  .orientation-container {
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .vehicle-model {
+    position: relative;
+    width: 200px;
+    height: 100px;
+    perspective: 500px;
+    transform-style: preserve-3d;
+  }
+  
+  .vehicle-body {
+    width: 200px;
+    height: 60px;
+    background-color: #be326c;
+    position: absolute;
+    bottom: 0;
+    border-radius: 10px;
+    transform-style: preserve-3d;
+  }
+  
+  .vehicle-top {
+    width: 140px;
+    height: 40px;
+    background-color: #32055c;
+    position: absolute;
+    top: 0;
+    left: 30px;
+    border-radius: 10px 10px 0 0;
+    transform-style: preserve-3d;
+  }
+  
+  .stats-container {
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  
+  .stat-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: rgba(50, 5, 92, 0.3);
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .stat-label {
+    font-weight: bold;
+  }
+  
+  #connection-status {
+    color: #4CAF50;
+  }
+  
+  @media (max-width: 1100px) {
+    .dashboard-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .card {
+      width: 100%;
+    }
+  }
+  
