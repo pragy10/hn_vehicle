@@ -101,7 +101,7 @@
   .vehicle-body {
     width: 200px;
     height: 60px;
-    background-color: #be326c;
+    background-color: #ffffff;
     position: absolute;
     bottom: 0;
     border-radius: 10px;
@@ -111,7 +111,7 @@
   .vehicle-top {
     width: 140px;
     height: 40px;
-    background-color: #32055c;
+    background-color: #dbed35;
     position: absolute;
     top: 0;
     left: 30px;
